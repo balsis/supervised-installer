@@ -1,3 +1,18 @@
+Общий вид команд для установки: 
+```bash
+curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh > installer.sh
+sudo chmod +x ./installer.sh
+sudo bash -x ./installer.sh -s -- -p /home/artur -d $PREFIX/smarthome/hassio
+```
+Частный конфиг для Ubuntu:
+```bash
+curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -x ./installer.sh -s -- -p /home/artur/smarthome -d $PREFIX/hassio
+```
+Частный Debian 10 (в настоящее время работает):
+```bash
+curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s -  -d /home/artur/smarthome/hassio
+```
+
 # This installation method is for advanced users only
 
 ## Make sure you understand [the requirements](https://github.com/home-assistant/architecture/blob/master/adr/0014-home-assistant-supervised.md)
@@ -33,14 +48,3 @@ you can set these parameters by appending ` --<parameter> <value>` like:
 curl -Lo installer.sh https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh
 bash installer.sh --machine MY_MACHINE
 ```
-
-
-curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh > installer.sh
-sudo chmod +x ./installer.sh
-sudo bash -x ./installer.sh -s -- -p /home/artur -d $PREFIX/smarthome/hassio
-
-Ubuntu:
-curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -x ./installer.sh -s -- -p /home/artur/smarthome -d $PREFIX/hassio
-
-Debian 10:
-curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s -  -d /home/artur/smarthome/hassio
