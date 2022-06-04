@@ -34,24 +34,13 @@ curl -Lo installer.sh https://raw.githubusercontent.com/home-assistant/supervise
 bash installer.sh --machine MY_MACHINE
 ```
 
-## Supported Machine types
 
-- intel-nuc
-- odroid-c2
-- odroid-n2
-- odroid-xu
-- qemuarm
-- qemuarm-64
-- qemux86
-- qemux86-64
-- raspberrypi
-- raspberrypi2
-- raspberrypi3
-- raspberrypi4
-- raspberrypi3-64
-- raspberrypi4-64
-- tinker
+curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh > installer.sh
+sudo chmod +x ./installer.sh
+sudo bash -x ./installer.sh -s -- -p /home/artur -d $PREFIX/smarthome/hassio
 
-## Troubleshooting
+Ubuntu:
+curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -x ./installer.sh -s -- -p /home/artur/smarthome -d $PREFIX/hassio
 
-If somethings going wrong, use `journalctl -f` to get your system logs. If you are not familiar with Linux and how you can fix issues, we recommend to use our Home Assistant OS.
+Debian 10:
+curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s -  -d /home/artur/smarthome/hassio
