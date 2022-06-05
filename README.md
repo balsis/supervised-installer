@@ -8,7 +8,7 @@ sudo bash -x ./installer.sh -s -- -p /home/artur -d $PREFIX/smarthome/hassio
 ```bash
 curl https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -x ./installer.sh -s -- -p /home/artur/smarthome -d $PREFIX/hassio
 ```
-Частный Debian 10 (в настоящее время работает):
+Частный конфиг Debian 10 (в настоящее время работает):
 ```bash
 curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s -  -d /home/artur/smarthome/hassio
 ```
